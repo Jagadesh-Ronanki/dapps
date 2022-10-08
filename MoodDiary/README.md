@@ -1,4 +1,4 @@
-MoodDiary is a sample begineer level daap built during the [Freshman track](https://learnweb3.io/courses/9a3fafe4-b5eb-4329-bdef-97b2aa6aacc1/lessons/1d8fc04a-af1b-4680-ac8b-755825d84ccc) by LearnWeb3DAO. I strongly recommend any begineer in web3 to consider learning platforms [learnweb3.io](https://learnweb3.io/) & [metaschool.so](https://metaschool.so/)
+MoodDiary is a sample beginner level daap built during the [Freshman track](https://learnweb3.io/courses/9a3fafe4-b5eb-4329-bdef-97b2aa6aacc1/lessons/1d8fc04a-af1b-4680-ac8b-755825d84ccc) by LearnWeb3DAO. I strongly recommend any begineer in web3 to consider learning platforms [learnweb3.io](https://learnweb3.io/) & [metaschool.so](https://metaschool.so/)
 
 ---
 
@@ -18,8 +18,9 @@ MoodDiary bulit using HTML, Ether.js depicts few of the begineer level workflow 
 
 indeed all together makes a dapp 😅
 
-Here is my project
+##### Here is my project snippet:
 
+![MoonDairy.png](./MoonDiary.png)
 
 
 ---
