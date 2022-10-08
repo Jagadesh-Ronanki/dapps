@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script
+    src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+    type="application/javascript"
+    ></script>
+    <script src="./script.js"></script>
+    <title>MoodDiary - Freshman Course</title>
+</head>
+<body>
+    <div class="display1">
+        <h1 id="page__header">MY FIRST DAPP</h1>
+    </div>
+
+    <div class="main">
+        <div class="mood__box">
+            <span>Input mood: </span><input id="mood" class="mood__input" type="text" placeholder="sad/happy/fear/anger/surprise/disgust">
+        </div>
+        <div class="mood__buttons">
+            <button class="button" onclick="setMood()">Set</button>
+            <button class="button" onclick="getMood()">Get</button>
+        </div>
+
+        <div class="mood__box">
+            <span>Current mood</span><p id="mood__current"></p>
+        </div>
+    </div>
+    
+</body>
+</html>
