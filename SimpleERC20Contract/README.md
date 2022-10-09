@@ -1,0 +1,1 @@
+Building a own simple ERC20 contract by [metaschool 10-days-of-solidity course](https://metaschool.so/course/10-days-of-solidity/lesson/9e8ab21c-bdb7-4cd7-a5a4-25945ca2b82f)
