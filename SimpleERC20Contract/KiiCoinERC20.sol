@@ -2,15 +2,15 @@
 pragma solidity 0.8.17;
 
 contract KiiCoinERC20 {
-    Transfer(address indexed from, address indexed to, uint tokens);
-    eventApproval(address indexed tokenOwner, address indexed spender, uint tokens);
+    event Transfer(address indexed from, address indexed to, uint tokens);
+    event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 
     string public constant name = "Kitty Coin";
     string public constant symbol = "kii";
     uint8 public constant decimals = 18;
 
     mapping(address => uint256) balances;
-    mapping(address => (address => uint256)) allowed;
+    mapping(address => mapping(address => uint256)) allowed;
 
     uint256 totalSupply;
 
@@ -25,8 +25,8 @@ contract KiiCoinERC20 {
     }
 
     // transfer tokens to desired account
-    function transfer(address receiver, uint numTokens) {
-        require(balance[msg.sender] >= numTokens);
+    function transfer(address receiver, uint numTokens) public returns(bool) {
+        require(balances[msg.sender] >= numTokens);
         balances[msg.sender] -= numTokens;
         balances[receiver] += numTokens;
 
@@ -35,7 +35,7 @@ contract KiiCoinERC20 {
     }
 
     // sanctioning a token
-    function approve(addresss delegate, uint numTokens) public returns(bool) {
+    function approve(address delegate, uint numTokens) public returns(bool) {
         allowed[msg.sender][delegate] = numTokens;
         emit Approval(msg.sender, delegate, numTokens);
 
@@ -55,6 +55,6 @@ contract KiiCoinERC20 {
         allowed[owner][msg.sender] == numTokens;
         balances[buyer] += numTokens;
         emit Transfer(owner, buyer, numTokens);
-        return True;        
+        return true;        
     }
 }
