@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity 0.8.17;
 
-contract Tasks{
+contract TaskContract{
     struct Task {
         uint256 taskId;
         string taskName;
@@ -29,7 +29,7 @@ contract Tasks{
         }
     }
 
-    function getTasks() external view returns (Task[] memory) {
+    function getMyTasks() external view returns (Task[] memory) {
         Task[] memory temporary = new Task[](tasks.length);
 
         uint256 len = tasks.length;
@@ -51,7 +51,7 @@ contract Tasks{
                 ++i;
             }
         }
-        
+
         return result;
     }
 
